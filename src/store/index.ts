@@ -10,6 +10,7 @@ import { programs } from "./programs";
 import { programOptions } from "./programOptions";
 import { pathways } from "./pathways";
 import { certifications } from "./certifications";
+import { internshipPartners } from "./internshipPartners";
 
 const vuexLocal = new VuexPersistence({
   storage: window.localStorage,
@@ -34,6 +35,7 @@ export default new Vuex.Store({
     certifications,
     testimonials,
     pathways,
+    internshipPartners,
   },
   mutations: {
     [SELECT_PLAN](state: any, planId) {
@@ -93,6 +95,7 @@ export default new Vuex.Store({
     getApplicant: (state) => state.applicant,
     getStartDate: (state) => state.startDate,
     getCertifications: (state) => state.certifications,
+    getInternshipPartners: (state) => state.internshipPartners,
   },
   modules: {},
   plugins: [vuexLocal.plugin],
